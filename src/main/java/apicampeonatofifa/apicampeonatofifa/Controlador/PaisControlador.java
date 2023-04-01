@@ -35,7 +35,7 @@ public class PaisControlador {
         return servicio.buscar(pais);
     }
 
-    @PostMapping(value = "/agregar")
+    @RequestMapping(value = "/agregar", method = RequestMethod.POST)
     public Pais crear(@RequestBody Pais pais) {
         return servicio.guardar(pais);
     }
