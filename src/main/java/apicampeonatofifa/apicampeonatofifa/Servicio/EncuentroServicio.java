@@ -26,8 +26,8 @@ public class EncuentroServicio implements IEncuentroServicio {
     }
 
     @Override
-    public List<Encuentro> buscar(String encuentro){
-        return repositorio.buscar(encuentro);
+    public List<Encuentro> buscar(Long id){
+        return repositorio.buscar(id);
     }
     
     @Override

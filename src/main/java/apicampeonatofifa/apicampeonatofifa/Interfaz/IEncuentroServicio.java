@@ -7,7 +7,7 @@ public interface IEncuentroServicio {
 
     public List<Encuentro> listar();
 
-    public List<Encuentro> buscar(String encuentro);
+    public List<Encuentro> buscar(Long id);
 
     public Encuentro obtener(Long id);
 

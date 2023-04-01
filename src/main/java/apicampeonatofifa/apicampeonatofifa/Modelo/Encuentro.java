@@ -13,7 +13,7 @@ public class Encuentro {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_encuentro")
     @GenericGenerator(name = "secuencia_encuentro", strategy = "increment")
 
-    @Column(name = "id", unique = true)
+    @Column(name = "id")
     private Long id;
 
     @ManyToOne
@@ -46,12 +46,12 @@ public class Encuentro {
     private int goles2;
 
     @Column(name = "penales1")
-    private int penales1;
+    private String penales1;
 
     @Column(name = "penales2")
-    private int penales2;
+    private String penales2;
 
-    @Column(name = "ecuentro")
+    @Column(name = "encuentro")
     private String encuentro;
 
     
@@ -60,7 +60,7 @@ public class Encuentro {
     }
 
     public Encuentro(Long id, Pais pais1, Pais pais2, Fase fase, Campeonato campeonato, Estadio estadio, Date fecha,
-            int goles1, int goles2, int penales1, int penales2, String encuentro) {
+            int goles1, int goles2, String penales1, String penales2, String encuentro) {
         this.id = id;
         this.pais1 = pais1;
         this.pais2 = pais2;
@@ -147,19 +147,19 @@ public class Encuentro {
         this.goles2 = goles2;
     }
 
-    public int getPenales1() {
+    public String getPenales1() {
         return penales1;
     }
 
-    public void setPenales1(int penales1) {
+    public void setPenales1(String penales1) {
         this.penales1 = penales1;
     }
 
-    public int getPenales2() {
+    public String getPenales2() {
         return penales2;
     }
 
-    public void setPenales2(int penales2) {
+    public void setPenales2(String penales2) {
         this.penales2 = penales2;
     }
 

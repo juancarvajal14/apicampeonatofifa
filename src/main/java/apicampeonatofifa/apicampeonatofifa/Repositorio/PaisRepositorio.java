@@ -11,7 +11,7 @@ import apicampeonatofifa.apicampeonatofifa.Modelo.Pais;
 @Repository
 public interface PaisRepositorio extends JpaRepository<Pais, Long>{
     
-    @Query("SELECT p FROM Pais p where p.pais LIKE '%'|| ?1 || '%' ")
+    @Query("SELECT p FROM Pais p where p.pais LIKE '%' || ?1 || '%' ")
     List<Pais> buscar(String pais);
-    
+
 }

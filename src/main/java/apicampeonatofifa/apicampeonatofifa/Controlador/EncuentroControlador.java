@@ -29,9 +29,9 @@ public class EncuentroControlador {
         return servicio.obtener(id);
     }
 
-    @RequestMapping(value = "/buscar/{encuentro}", method = RequestMethod.GET)
-    public List<Encuentro> buscar(@PathVariable String encuentro) {
-        return servicio.buscar(encuentro);
+    @RequestMapping(value = "/buscar/{id}", method = RequestMethod.GET)
+    public List<Encuentro> buscar(@PathVariable Long id) {
+        return servicio.buscar(id);
     }
 
     @RequestMapping(value = "/agregar", method = RequestMethod.POST)

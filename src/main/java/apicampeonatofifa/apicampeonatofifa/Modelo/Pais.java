@@ -15,7 +15,7 @@ public class Pais {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "pais", unique = true)
+    @Column(name = "pais")
     private String pais;
 
     @Column(name = "entidad")

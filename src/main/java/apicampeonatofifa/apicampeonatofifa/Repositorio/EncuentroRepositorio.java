@@ -11,7 +11,7 @@ import apicampeonatofifa.apicampeonatofifa.Modelo.Encuentro;
 @Repository
 public interface EncuentroRepositorio extends JpaRepository<Encuentro, Long> {
 
-    @Query("SELECT e FROM Encuentro e where e.encuentro LIKE '%'|| ?1 || '%' ")
-    List<Encuentro> buscar(String encuentro);
+    @Query("SELECT e FROM Encuentro e where e.id LIKE '%' || ?1 || '%' ")
+    List<Encuentro> buscar(Long id);
     
 }
